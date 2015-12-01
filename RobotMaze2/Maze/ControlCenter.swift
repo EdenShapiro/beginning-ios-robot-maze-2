@@ -13,56 +13,50 @@ class ControlCenter {
 
     func moveComplexRobot(robot: ComplexRobotObject) {
       
-    // You may want to paste your Project 2.1 implementation of moveComplexRobot() here
+    // You may want to paste your Project 2.2 implementation of moveComplexRobot() here
+
         
-        // Step 2.1c
-        // TODO: Save the return value of checkWalls() to a constant called myWallInfo.
-        
-        
-        // Step 2.2a
-        // Categorize the robot's current location based on the number of walls
-        
-        // let isThreeWayJunction = (myWallInfo.numberOfWalls == 1)
-        
-        // TODO: Define the constant, isTwoWayPath
-        
-        // TODO: Define the constant, isDeadEnd
-        
-        
-        // Step 2.2b
-        // Test whether the values of the above constants are correct
-        
-        
-        // Step 2.3a
-        // Three-way Path - else-if statements
-        
-        // TODO: If the robot encounters a three way junction and there IS a wall ahead, it should randomly rotate right or left. Uncomment the code below.
-        //        if isThreeWayJunction && robotIsBlocked {
-        //            randomlyRotateRightOrLeft(myRobot)
-        //        }
-        
-        
-        // Step 2.3b
-        // TODO: If the robot encounters a three way junction and there is NO wall ahead, it should continue straight or rotate (you need to write this else-if statement)
-        
-        
-        // Step 2.3c
+        // Step 3.2
         // Two-way Path - else-if statements
         
         // TODO: If the robot encounters a two way path and there is NO wall ahead it should continue forward.
         
-        // TODO: If the robot encounters a two way path and there IS a wall ahead, it should randomly rotate.
+        // TODO: If the robot encounters a two way path and there IS a wall ahead, it should turn in the direction of the clear path.
         
+    }
+    
+    func isFacingWall(robot: ComplexRobotObject, direction: MazeDirection) -> Bool {
         
-        // Step 2.3d
-        // Dead end - else-if statements
+        let cell = mazeController.currentCell(robot)
+        var isWall: Bool = false
         
-        // TODO: If the robot encounters a dead end and there is NO wall ahead it should move forward.
+        // You may want to paste your Project 2.2 implementation of isFacingWall() here
+
+        return false
+    }
+    
+    func checkWalls(robot:ComplexRobotObject) -> (up: Bool, right: Bool, down: Bool, left: Bool, numberOfWalls: Int) {
+        var numberOfWalls = 0
+        let cell = mazeController.currentCell(robot)
         
-        // TODO: If the robot encounters a dead end and there IS a wall ahead it should rotateRight().
+        // Check is there is a wall at the top of the current cell
+        let isWallUp = cell.top
+        if isWallUp {
+            numberOfWalls++
+        }
+        
+        // Check if there is a wall to the right of the current cell
+        let isWallRight = cell.right
+        if isWallRight {
+            numberOfWalls++
+        }
+        
+        // You may want to paste your Project 2.2 implementation of checkWalls() here
+        return (false, false, false, false, 0)
     }
     
     func previousMoveIsFinished(robot: ComplexRobotObject) {
             self.moveComplexRobot(robot)
     }
+    
 }

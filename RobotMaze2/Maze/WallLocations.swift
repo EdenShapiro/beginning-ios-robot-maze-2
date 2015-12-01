@@ -15,7 +15,7 @@ extension ControlCenter {
         let cell = mazeController.currentCell(robot)
         var isWall: Bool = false
         
-        // You may want to paste your Project 2.1 implementation of isFacingWall() here
+        // You may want to paste your Part 1 implementation of isFacingWall() here
         
         return false
     }

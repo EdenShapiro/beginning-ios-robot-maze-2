@@ -49,6 +49,10 @@ class ControlCenter {
         
         // TODO: If the robot encounters a two way path and there IS a wall ahead, it should randomly rotate.
         
+        // Part 3 - Step 3.2
+        // Two-way Path - else-if statements
+        
+        // TODO: If the robot encounters a two way path and there IS a wall ahead, it should turn in the direction of the clear path.
         
         // Step 2.3c
         // Dead end - else-if statements

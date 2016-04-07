@@ -27,13 +27,13 @@ extension ControlCenter {
         // Check is there is a wall at the top of the current cell
         let isWallUp = cell.top
         if isWallUp {
-            numberOfWalls++
+            numberOfWalls += 1
         }
         
         // Check if there is a wall to the right of the current cell
         let isWallRight = cell.right
         if isWallRight {
-            numberOfWalls++
+            numberOfWalls += 1
         }
         
         // Step 2.1a
